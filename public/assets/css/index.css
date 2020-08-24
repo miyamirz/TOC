@@ -1,0 +1,179 @@
+#toc-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+#toc-container {
+    display: flex;
+    flex-direction: column;
+    width: 1020px;
+    max-width: 1020px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#toc-container .content-item, .lesson-item {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: relative;
+}
+
+.addBorder {
+    border-top: 3px solid rgb(250, 250, 250);
+    border-left: 3px solid rgb(250, 250, 250);
+    border-right: 3px solid rgb(250, 250, 250);
+}
+
+.lesson-item {
+    padding-left: 4rem;
+    font-weight: 300;
+}
+
+#toc-container .content-item:hover {
+    background-color: #00a353;
+    color: #fff;
+}
+
+#toc-container:last-child {
+    border-bottom: 3px solid rgb(250, 250, 250);
+}
+
+.lessons_hidden {
+    display: none;
+}
+
+.lessons_visible {
+    display: block;
+}
+
+.expandIcon {
+    margin-left: 1rem;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.expandIconDisabled {
+    visibility: hidden;
+}
+
+.item-title {
+    margin-left: 1rem
+}
+
+.lesson-item .item-title {
+    font-size: 14px;
+}
+
+.progressEle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #007791;
+}
+
+.complete {
+    background-color: #007791
+}
+
+.in_progress {
+    animation: progress 2s ease-in infinite;
+}
+
+.not_started {
+    background-color: #fff;
+}
+
+.progress-bar {
+    width: 5rem;
+    height: 4px;
+    border-radius: 12px;
+    background-color: rgba(41, 48, 59, .25);
+    border: 1px solid transparent;
+    position: absolute;
+    right: 2rem;
+}
+
+.progress-bar-width {
+    border-radius: 12px;
+    background-color: #007791;
+}
+
+.progress-text {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+#toc-container .content-item:hover .progress-bar {
+    background-color: #fff;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: 20px;
+    font-weight: 300;
+    align-items: center;
+}
+
+.error-container div {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loading_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    font-size: 12px;
+}
+
+.loading_container img {
+    margin-right: 1rem;
+}
+
+.custom-error-message {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+    border-radius: 8px;
+    visibility: hidden;
+    background-color: #fff;
+    transition: all 2s linear;
+}
+
+.error-heading {
+    color: #fff;
+    width: 100%;
+    height: 2rem;
+    justify-content: center;
+    background: red;
+    display: flex;
+    align-items: center;
+}
+
+.error-text {
+    margin-top: 1rem;
+}
+
+@keyframes progress {
+    from {
+        background-color: #fff;
+        transform: scale(1);
+    }
+    to {
+        background-color: #007791;
+        transform: scale(1.2);
+    }
+}
